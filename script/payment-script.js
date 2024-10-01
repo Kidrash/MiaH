@@ -79,3 +79,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 2000); // 2 second delay
     }
 });
+
+document.getElementById('expiry-date').addEventListener('input', function(e) {
+    let input = e.target.value;
+
+    // Remove any non-numeric characters
+    input = input.replace(/\D/g, '');
+
+    // Format the input as MM/YY
+    if (input.length > 2) {
+        input = input.slice(0, 2) + '/' + input.slice(2);
+    }
+
+    // Set the value back to the input field
+    e.target.value = input;
+});
