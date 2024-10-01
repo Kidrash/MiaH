@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Software - Payment</title>
+    <link rel="stylesheet" href="/MiaH/styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Complete Your Purchase</h1>
+    </header>
+
+    <main>
+        <section class="payment-methods">
+            <h2>Select Payment Method</h2>
+            <div class="method-buttons">
+                <button class="method-btn" data-method="mpesa">Mpesa</button>
+                <button class="method-btn" data-method="skrill">Skrill</button>
+                <button class="method-btn" data-method="bank">Bank Transfer</button>
+            </div>
+        </section>
+
+        <section class="payment-form">
+            <form id="paymentForm">
+                <div id="mpesa-form" class="method-form">
+                    <label for="mpesa-number">Mpesa Number:</label>
+                    <input type="tel" id="mpesa-number" name="mpesa-number" placeholder="Enter your M-Pesa number">
+                </div>
+
+                <div id="skrill-form" class="method-form">
+                    <label for="skrill-email">Skrill Email:</label>
+                    <input type="email" id="skrill-email" name="skrill-email" required>
+                </div>
+
+                <div id="bank-form" class="method-form">
+                    <label for="bank-name">Bank Name:</label>
+                    <input type="text" id="bank-name" name="bank-name" required>
+                    <label for="account-number">Account Number:</label>
+                    <input type="text" id="account-number" name="account-number" required>
+                </div>
+
+                <button type="submit" class="btn-primary">Complete Payment</button>
+            </form>
+        </section>
+
+        <section class="confirmation" style="display: none;">
+            <h2>Payment Confirmed!</h2>
+            <p>Thank you for your purchase. Your software is ready for download.</p>
+            <button id="download-btn" class="btn-primary">Download Software</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jeremy's Software. All rights reserved.</p>
+    </footer>
+
+    <script src="/MiaH/script/payment-script.js"></script>
+</body>
+</html>
